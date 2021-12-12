@@ -3,6 +3,7 @@
 .PHONY: setup
 setup:
 	if [ ! -f "leanote/app.conf" ]; then cp leanote/app.conf.example leanote/app.conf; fi
+	if [ ! -f "nginx/site.conf" ]; then cp nginx/site.conf.example nginx/site.conf; fi
 
 .PHONY: build
 build:
