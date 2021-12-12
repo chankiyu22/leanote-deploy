@@ -1,5 +1,9 @@
 #!make
 
+.PHONY: setup
+setup:
+	if [ ! -f "leanote/app.conf" ]; then cp leanote/app.conf.example leanote/app.conf; fi
+
 .PHONY: build
 build:
 	tar -C ./leanote -xzf leanote/leanote-linux-amd64-v2.6.1.bin.tar.gz
